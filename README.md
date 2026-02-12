@@ -9,11 +9,11 @@ This project demonstrates the integration of modern desktop application patterns
 ---
 
 <div align="center">
-  <a href="Assets/demo.mp4">
-    <img src="Assets/home_page.png" alt="Watch the Demo" width="800" style="border-radius: 8px;">
+  <a href="https://www.youtube.com/watch?v=yccCG2yYNDM">
+    <img src="https://img.youtube.com/vi/yccCG2yYNDM/maxresdefault.jpg" alt="Watch the Demo" width="800" style="border-radius: 8px;">
   </a>
   <br>
-  <em>▶️ Click above to watch the quick demo (24MB)</em>
+  <em>▶️ Click above to watch the quick demo on YouTube</em>
 </div>
 
 ---
